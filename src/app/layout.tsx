@@ -34,8 +34,20 @@ export default function RootLayout({
         </main>
 
         {/* Footer */}
-        <footer className="py-6 border-t border-neutral-900 text-center text-sm text-neutral-500">
-          &copy; {new Date().getFullYear()} Smart Resizer. Powered by Browser AI.
+        <footer className="py-6 border-t border-neutral-900 text-center text-sm text-neutral-500 flex flex-col sm:flex-row items-center justify-center gap-1">
+          <span>&copy; {new Date().getFullYear()} Smart Resizer. Powered by Browser AI.</span>
+          <span className="hidden sm:inline"> | </span>
+          <span>
+            Built by{" "}
+            <a 
+              href="https://github.com/bs-bhadauria" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-300 font-medium transition-colors"
+            >
+              Bhoopendra Singh Bhadauria
+            </a>
+          </span>
         </footer>
         <Analytics />
         <SpeedInsights />
