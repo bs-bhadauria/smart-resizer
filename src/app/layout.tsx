@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -35,6 +37,8 @@ export default function RootLayout({
         <footer className="py-6 border-t border-neutral-900 text-center text-sm text-neutral-500">
           &copy; {new Date().getFullYear()} Smart Resizer. Powered by Browser AI.
         </footer>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
